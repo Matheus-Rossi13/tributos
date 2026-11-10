@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tributo Advogados | Direito Tributário em Belo Horizonte</title>
+<meta name="description" content="Tributo Advogados: escritório dedicado exclusivamente ao Direito Tributário. R. Buenos Aires, 345, Sion, Belo Horizonte.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F3F3F2; --surface:#FFFFFF; --ink:#1E1F20; --muted:#5A5C5E; --line:#DCDCDA;
+  --maroon:#861619; --maroon-2:#6E1215; --graphite:#5E5F60; --graphite-2:#2F3031;
+  --on-dark:#F4F3F1; --on-dark-muted:#C4C3C1; --link:#861619; --tile-gap:4px;
+  --title:"Cinzel", "Trajan Pro", Georgia, serif;
+  --sans:"Source Sans 3", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color-scheme:light; box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#151516; --surface:#1E1F20; --ink:#ECEBE9; --muted:#A4A3A1; --line:#2E2F30;
+    --maroon:#9C2226; --maroon-2:#7E1A1D; --graphite:#4D4E4F; --graphite-2:#232425;
+    --on-dark:#F4F3F1; --on-dark-muted:#C4C3C1; --link:#E8908F; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#151516; --surface:#1E1F20; --ink:#ECEBE9; --muted:#A4A3A1; --line:#2E2F30;
+  --maroon:#9C2226; --maroon-2:#7E1A1D; --graphite:#4D4E4F; --graphite-2:#232425;
+  --on-dark:#F4F3F1; --on-dark-muted:#C4C3C1; --link:#E8908F; color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:inherit}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 80px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.06rem/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--surface)}
+a{color:var(--link)}
+:focus-visible{outline:2px solid var(--maroon);outline-offset:3px}
+.wrap{width:min(1140px,100% - 40px);margin-inline:auto}
+h1,h2,h3{margin:0;line-height:1.2}
+h1,h2{font-family:var(--title);font-weight:600;letter-spacing:.01em}
+h3{font-family:var(--sans);font-weight:700;font-size:1.15rem}
+.center{text-align:center}
+.logo-svg svg{display:block;width:100%;height:auto}
+
+/* Cabeçalho */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--surface);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.brand .logo-svg{width:46px}
+.brand b{font:700 1.2rem/1 var(--title);letter-spacing:.04em}
+.brand small{display:block;font:500 .78rem/1.5 var(--sans);color:var(--muted);margin-top:3px}
+nav{display:flex;align-items:center;gap:26px}
+nav a.l{color:var(--ink);text-decoration:none;font-weight:600;font-size:.95rem}
+nav a.l:hover{color:var(--link)}
+@media (max-width:900px){nav a.l{display:none}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;cursor:pointer;font:700 1rem var(--sans);padding:14px 26px;text-decoration:none;background:var(--maroon);color:#fff;border-radius:0}
+.btn:hover{background:var(--maroon-2)}
+.btn.sm{padding:10px 16px;font-size:.92rem}
+.btn.ghost{background:transparent;color:var(--on-dark);box-shadow:inset 0 0 0 1.5px var(--on-dark-muted)}
+.btn.ghost:hover{background:rgba(255,255,255,.08)}
+.btn.light{background:#fff;color:#861619}
+.btn.light:hover{background:#F1E6E6}
+
+/* Hero */
+.hero{background:var(--graphite-2);color:var(--on-dark)}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:center;padding:96px 0 104px}
+.hero h1{font-size:clamp(2rem,4.4vw,3.3rem);max-width:18ch}
+.hero p{font-size:1.18rem;color:var(--on-dark-muted);max-width:48ch;margin:22px 0 34px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.hero-logo{justify-self:end;width:min(320px,100%)}
+.hero-logo rect{opacity:0;transform-box:fill-box;transform-origin:center;animation:tile .5s ease-out forwards}
+.hero-logo text{opacity:0;animation:fade .5s ease-out forwards}
+.hero-logo .t1{animation-delay:.05s}.hero-logo .t2{animation-delay:.2s}.hero-logo .t3{animation-delay:.35s}.hero-logo .t4{animation-delay:.5s}
+.hero-logo text{animation-delay:.75s}
+@keyframes tile{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:none}}
+@keyframes fade{to{opacity:1}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero-logo rect,.hero-logo text{animation:none;opacity:1}}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr;padding:56px 0 68px;gap:36px}.hero-logo{justify-self:start;width:150px;order:-1}}
+
+/* Seções */
+section.s{padding:88px 0}
+.s h2{font-size:clamp(1.7rem,3.2vw,2.35rem)}
+.sub{color:var(--muted);max-width:62ch;margin:14px auto 0}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--tile-gap);margin-top:48px;text-align:left}
+.svc{background:var(--surface);padding:32px 28px}
+.mark{width:50px;height:50px;display:grid;place-items:center;color:#fff;margin-bottom:20px;background:var(--maroon)}
+.svc:nth-child(even) .mark{background:var(--graphite)}
+.svc h3{margin-bottom:8px}
+.svc p{margin:0;color:var(--muted);font-size:.99rem}
+@media (max-width:900px){.tiles{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.tiles{grid-template-columns:1fr}section.s{padding:64px 0}}
+
+.band{background:var(--maroon);color:#fff;padding:52px 0}
+.band .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px}
+.band h2{font-size:clamp(1.35rem,2.6vw,1.9rem);max-width:30ch}
+.ask{text-align:center;padding:0 0 88px}
+.ask h2{font-size:clamp(1.35rem,2.6vw,1.9rem);max-width:32ch;margin:0 auto 24px}
+
+/* Sobre */
+.about{background:var(--surface);border-block:1px solid var(--line)}
+.about .wrap{display:grid;grid-template-columns:1.3fr .7fr;gap:56px;align-items:center}
+.kicker{color:var(--link);font-weight:700;margin:0 0 8px}
+.about p.txt{color:var(--muted);max-width:62ch;margin:18px 0 14px}
+.facts{display:flex;flex-wrap:wrap;gap:var(--tile-gap);margin:26px 0 30px}
+.facts div{background:var(--bg);padding:14px 18px;min-width:150px}
+.facts b{display:block;font:600 1.05rem var(--title);color:var(--link)}
+.facts span{font-size:.92rem;color:var(--muted)}
+.photo{aspect-ratio:4/5;background:var(--graphite);color:var(--on-dark-muted);display:grid;place-items:center;text-align:center;font-size:.95rem;padding:20px}
+@media (max-width:860px){.about .wrap{grid-template-columns:1fr}.photo{aspect-ratio:16/9;max-width:420px}}
+
+/* Diferenciais em 2x2, como a logo */
+.quad{display:grid;grid-template-columns:1fr 1fr;gap:var(--tile-gap);margin-top:44px;max-width:900px;margin-inline:auto}
+.quad div{padding:40px 36px;color:#fff;background:var(--maroon)}
+.quad div:nth-child(2),.quad div:nth-child(3){background:var(--graphite)}
+.quad h3{font:600 1.35rem/1.25 var(--title);margin-bottom:10px}
+.quad p{margin:0;color:rgba(255,255,255,.86)}
+@media (max-width:640px){.quad{grid-template-columns:1fr}.quad div{padding:30px 24px}.quad div:nth-child(3){background:var(--maroon)}.quad div:nth-child(4){background:var(--graphite)}}
+
+/* Reforma */
+.feature{background:var(--surface);border:1px solid var(--line);padding:48px;display:grid;grid-template-columns:.95fr 1.05fr;gap:44px;align-items:center}
+.feature p{color:var(--muted);margin:16px 0 24px}
+.tl{display:grid;gap:var(--tile-gap)}
+.tl div{display:flex;gap:18px;align-items:center;background:var(--bg);padding:14px 18px}
+.tl b{font:700 1.25rem var(--title);color:var(--link);min-width:3.4em}
+@media (max-width:860px){.feature{grid-template-columns:1fr;padding:30px 22px}}
+
+/* Contato */
+.contact{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;margin-top:40px}
+dl{margin:0;display:grid;gap:20px}
+dt{font-size:.9rem;color:var(--muted);font-weight:700}
+dd{margin:2px 0 0;font-size:1.08rem}
+form{background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--maroon);padding:28px;display:grid;gap:16px}
+form h3{font:600 1.35rem var(--title)}
+label{display:grid;gap:6px;font-size:.95rem;font-weight:600}
+input,select,textarea{font:inherit;font-size:1rem;font-weight:400;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:0;padding:11px 12px;width:100%}
+textarea{min-height:110px;resize:vertical}
+.err{color:var(--link);font-size:.93rem;min-height:1.2em;margin:0}
+.note{font-size:.88rem;color:var(--muted);margin:0}
+@media (max-width:860px){.contact{grid-template-columns:1fr}}
+
+footer{background:var(--graphite-2);color:var(--on-dark-muted);padding:44px 0 100px;font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:flex-start}
+footer .f-brand{display:flex;gap:14px;align-items:center}
+footer .logo-svg{width:54px}
+footer strong{color:var(--on-dark);font:700 1.05rem var(--title)}
+footer a{color:var(--on-dark)}
+.fab{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:6;box-shadow:0 8px 22px rgba(0,0,0,.3)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#inicio" aria-label="Tributo Advogados, início">
+      <span class="logo-svg" aria-hidden="true"></span>
+      <span><b>Tributo Advogados</b><small>Direito Tributário</small></span>
+    </a>
+    <nav>
+      <a class="l" href="#atuacao">Áreas de atuação</a>
+      <a class="l" href="#sobre">O escritório</a>
+      <a class="l" href="#reforma">Reforma tributária</a>
+      <a class="l" href="#contato">Contato</a>
+      <a class="btn sm" data-tel href="#">Ligar agora</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Advocacia dedicada exclusivamente ao Direito Tributário</h1>
+        <p>Defendemos empresas e pessoas físicas perante as Fazendas Públicas Federal, Estadual e Municipal, na esfera administrativa e judicial.</p>
+        <div class="ctas">
+          <a class="btn" data-tel href="#">Ligar <span data-c="telefone"></span></a>
+          <a class="btn ghost" href="#contato">Solicitar atendimento</a>
+        </div>
+      </div>
+      <div class="hero-logo logo-svg" data-anim aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <section class="s" id="atuacao">
+    <div class="wrap center">
+      <h2>Veja como podemos ajudar</h2>
+      <p class="sub">Atuação preventiva e na defesa diante da Receita Federal, da Secretaria de Fazenda de Minas Gerais e dos municípios.</p>
+      <div class="tiles" id="g-empresas"></div>
+    </div>
+  </section>
+
+  <div class="band">
+    <div class="wrap">
+      <h2>Sua empresa recebeu uma notificação ou um auto de infração?</h2>
+      <a class="btn light" data-tel href="#">Falar com um advogado</a>
+    </div>
+  </div>
+
+  <section class="s">
+    <div class="wrap center">
+      <h2>Para você e seu patrimônio</h2>
+      <p class="sub">Questões tributárias também fazem parte da vida pessoal, da declaração anual à herança.</p>
+      <div class="tiles" id="g-pessoas"></div>
+    </div>
+  </section>
+
+  <div class="ask wrap">
+    <h2>Tem outra questão tributária em que precisa de orientação?</h2>
+    <a class="btn" href="#contato">Solicitar atendimento</a>
+  </div>
+
+  <section class="s about" id="sobre">
+    <div class="wrap">
+      <div>
+        <p class="kicker">Quem somos</p>
+        <h2>Tributo Advogados</h2>
+        <p class="txt" data-c="sobre1"></p>
+        <p class="txt" data-c="sobre2"></p>
+        <div class="facts">
+          <div><b>Tributário</b><span>Foco exclusivo</span></div>
+          <div><b>3 esferas</b><span>Federal, estadual e municipal</span></div>
+          <div><b>Sion, BH</b><span>Atendimento presencial ou online</span></div>
+        </div>
+        <a class="btn" href="#contato">Agendar uma conversa</a>
+      </div>
+      <div class="photo">Espaço para foto da equipe ou da fachada do escritório</div>
+    </div>
+  </section>
+
+  <section class="s">
+    <div class="wrap">
+      <h2 class="center">Por que escolher nosso escritório</h2>
+      <div class="quad">
+        <div><h3>Especialização</h3><p>Trabalhamos apenas com Direito Tributário, o que permite acompanhar de perto a legislação e a jurisprudência.</p></div>
+        <div><h3>Atendimento direto</h3><p>Você conversa com o advogado responsável pelo seu caso, sem intermediários.</p></div>
+        <div><h3>Prevenção e defesa</h3><p>Atuamos no planejamento, antes do problema, e na defesa administrativa e judicial, depois dele.</p></div>
+        <div><h3>Linguagem clara</h3><p>Explicamos tributos, prazos e riscos de forma objetiva, para você decidir com segurança.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="s" id="reforma" style="padding-top:0">
+    <div class="wrap">
+      <div class="feature">
+        <div>
+          <p class="kicker">Em destaque</p>
+          <h2>Reforma tributária: sua empresa está se preparando?</h2>
+          <p>A substituição gradual de PIS, Cofins, ICMS, ISS e parte do IPI pela CBS e pelo IBS muda preços, contratos e sistemas. Ajudamos a entender o impacto no seu negócio e a planejar a transição.</p>
+          <a class="btn" href="#contato">Conversar sobre a reforma</a>
+        </div>
+        <div class="tl">
+          <div><b>2026</b><span>Ano de teste da CBS e do IBS, com alíquotas reduzidas</span></div>
+          <div><b>2027</b><span>Início da cobrança da CBS e extinção de PIS e Cofins</span></div>
+          <div><b>2029</b><span>Começa a transição gradual de ICMS e ISS para o IBS</span></div>
+          <div><b>2033</b><span>Novo sistema em vigor de forma integral</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="s" id="contato" style="padding-top:0">
+    <div class="wrap">
+      <h2 class="center">Contato</h2>
+      <div class="contact">
+        <dl>
+          <div><dt>Endereço</dt><dd><span data-c="endereco"></span><br><a id="maps" href="#" target="_blank" rel="noopener">Como chegar pelo Google Maps</a></dd></div>
+          <div><dt>Telefone</dt><dd><a data-tel href="#" data-c="telefone"></a></dd></div>
+          <div><dt>Horário de atendimento</dt><dd data-c="horario"></dd></div>
+          <div><dt>Atendimento</dt><dd>Presencial no Sion ou por videochamada</dd></div>
+        </dl>
+        <form id="form" novalidate>
+          <h3>Solicite um atendimento</h3>
+          <label>Seu nome<input id="f-nome" autocomplete="name"></label>
+          <label>Telefone para retorno<input id="f-tel" type="tel" autocomplete="tel"></label>
+          <label>Você é<select id="f-tipo"><option>Empresa</option><option>Pessoa física</option></select></label>
+          <label>Assunto<select id="f-area"></select></label>
+          <label>Conte brevemente a situação (opcional)<textarea id="f-msg"></textarea></label>
+          <p class="err" id="f-err" role="alert"></p>
+          <button class="btn" type="submit" id="f-btn">Enviar solicitação</button>
+          <p class="note" id="f-note"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-brand"><span class="logo-svg" aria-hidden="true"></span><div><strong>Tributo Advogados</strong><br><span data-c="endereco"></span></div></div>
+    <div>Telefone: <a data-tel href="#" data-c="telefone"></a><br><span data-c="oab"></span><br>Conteúdo informativo, conforme o Provimento nº 205/2021 do Conselho Federal da OAB.</div>
+  </div>
+</footer>
+
+<a class="btn fab" id="fab" href="#" aria-label="Falar pelo WhatsApp" hidden>WhatsApp</a>
+
+<script>
+/* ======== EDITE AQUI ======== */
+const CONFIG = {
+  telefone: "(31) 3284-9595",
+  telefoneLink: "+553132849595",
+  whatsapp: "",   // deixe vazio enquanto não houver WhatsApp; ex.: "5531999999999" ativa o botão e o envio pelo WhatsApp
+  email: "contato@tributoadvogados.com.br",   // confirmar com o escritório
+  endereco: "R. Buenos Aires, 345, Sion, Belo Horizonte, MG, 30315-570",
+  horario: "Segunda a sexta, das 9h às 18h",
+  oab: "Inscrição OAB/MG (informar número)",
+  sobre1: "A Tributo Advogados é um escritório de Belo Horizonte com atuação exclusiva em Direito Tributário. Nosso trabalho é defender os interesses dos clientes perante as Fazendas Públicas Federal, Estadual e Municipal.",
+  sobre2: "Atendemos empresas de diferentes portes e pessoas físicas com atenção individual, combinando análise técnica da legislação com comunicação clara sobre cada etapa."
+};
+/* ============================ */
+
+const LOGO = `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo Tributo">
+  <rect class="t1" x="0" y="0" width="48" height="48" fill="#861619"/>
+  <rect class="t2" x="52" y="0" width="48" height="48" fill="#5E5F60"/>
+  <rect class="t3" x="0" y="52" width="48" height="48" fill="#5E5F60"/>
+  <rect class="t4" x="52" y="52" width="48" height="48" fill="#861619"/>
+  <g font-family="Cinzel, 'Trajan Pro', Georgia, serif" font-weight="700" font-size="27" fill="#fff" text-anchor="middle">
+    <text x="24" y="34">Tr</text><text x="76" y="34">Ib</text>
+    <text x="24" y="86">U</text><text x="76" y="86">To</text>
+  </g></svg>`;
+document.querySelectorAll(".logo-svg").forEach(el => el.innerHTML = LOGO);
+
+const ICON = {
+  plan:'<path d="M4 19V5m0 14h16M8 15l3-4 3 2 5-6"/>',
+  coin:'<circle cx="12" cy="12" r="8"/><path d="M12 8v8m-2.5-2.2c.4.8 1.3 1.2 2.5 1.2 1.4 0 2.5-.7 2.5-1.7 0-2.4-5-1.2-5-3.6 0-1 1-1.7 2.5-1.7 1.1 0 2 .4 2.4 1.1"/>',
+  shield:'<path d="M12 3l7 3v5c0 4.5-3 8.2-7 10-4-1.8-7-5.5-7-10V6l7-3Z"/><path d="M9 12l2 2 4-4"/>',
+  scale:'<path d="M12 4v16M7 20h10M5 8h14M5 8l-3 6a3 3 0 0 0 6 0L5 8Zm14 0l-3 6a3 3 0 0 0 6 0l-3-6Z"/>',
+  doc:'<path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/>',
+  cal:'<rect x="4" y="5" width="16" height="15"/><path d="M4 10h16M9 3v4m6-4v4m-6 7h2m2 0h2"/>',
+  person:'<circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/>',
+  home:'<path d="M4 11l8-7 8 7v9H4z"/><path d="M10 20v-5h4v5"/>',
+  tree:'<circle cx="12" cy="5" r="2"/><circle cx="6" cy="17" r="2"/><circle cx="18" cy="17" r="2"/><path d="M12 7v4m0 0H6v4m6-4h6v4"/>',
+  building:'<rect x="5" y="3" width="14" height="18"/><path d="M9 7h2m2 0h2M9 11h2m2 0h2M9 15h2m2 0h2M10 21v-3h4v3"/>',
+  search:'<circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/>',
+  gift:'<rect x="4" y="9" width="16" height="11"/><path d="M3 9h18M12 9v11M12 9c-2-4-6-4-6-1.5S9 9 12 9Zm0 0c2-4 6-4 6-1.5S15 9 12 9Z"/>'
+};
+const EMPRESAS = [
+  ["plan","Planejamento tributário","Análise do regime de tributação e da estrutura da empresa para pagar os tributos devidos dentro da lei, sem excessos."],
+  ["coin","Recuperação de créditos","Revisão de tributos pagos nos últimos cinco anos para identificar valores recolhidos indevidamente ou a maior."],
+  ["shield","Defesa em autos de infração","Impugnações e recursos contra autuações da Receita Federal, da Fazenda Estadual e do Município."],
+  ["scale","Contencioso judicial","Mandados de segurança, ações anulatórias e outras discussões tributárias perante a Justiça."],
+  ["doc","Execução fiscal","Defesa em cobranças judiciais de tributos, com análise de prescrição, nulidades e garantias."],
+  ["cal","Parcelamento e transação","Orientação sobre programas de parcelamento e acordos de transação tributária com a Fazenda."]
+];
+const PESSOAS = [
+  ["person","Imposto de Renda","Apoio em malha fina, intimações da Receita e revisão de declarações de pessoa física."],
+  ["gift","ITCMD em heranças e doações","Orientação sobre o imposto na transmissão de bens, em vida ou por herança, em Minas Gerais."],
+  ["tree","Holding e planejamento sucessório","Organização do patrimônio familiar considerando os efeitos tributários da sucessão."],
+  ["home","IPTU e ITBI","Questionamento de lançamentos, isenções e base de cálculo na compra de imóveis."],
+  ["building","Tributação de aluguéis","Orientação sobre a tributação da renda de imóveis alugados e formas de organização."],
+  ["search","Regularização fiscal","Diagnóstico de pendências e caminhos para regularizar a situação junto aos órgãos fiscais."]
+];
+
+document.querySelectorAll("[data-c]").forEach(el => { el.textContent = CONFIG[el.dataset.c] ?? ""; });
+document.querySelectorAll("[data-tel]").forEach(a => { a.href = "tel:" + CONFIG.telefoneLink; });
+document.getElementById("maps").href = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent("Tributo Advogados, " + CONFIG.endereco);
+
+const wa = t => `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(t)}`;
+if (CONFIG.whatsapp) {
+  const fab = document.getElementById("fab");
+  fab.hidden = false; fab.href = wa("Olá! Vim pelo site da Tributo Advogados e gostaria de mais informações."); fab.target = "_blank"; fab.rel = "noopener";
+}
+document.getElementById("f-btn").textContent = CONFIG.whatsapp ? "Enviar pelo WhatsApp" : "Enviar por e-mail";
+document.getElementById("f-note").textContent = CONFIG.whatsapp
+  ? "A mensagem abre pronta no WhatsApp do escritório. Nada é enviado antes de você confirmar."
+  : "A mensagem abre pronta no seu aplicativo de e-mail. Nada é enviado antes de você confirmar.";
+
+function tiles(id, list){
+  document.getElementById(id).innerHTML = list.map(([i,t,d]) =>
+    `<article class="svc"><div class="mark"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICON[i]}</svg></div><h3>${t}</h3><p>${d}</p></article>`).join("");
+}
+tiles("g-empresas", EMPRESAS);
+tiles("g-pessoas", PESSOAS);
+
+const sel = document.getElementById("f-area");
+[...EMPRESAS, ...PESSOAS].map(x => x[1]).concat("Reforma tributária","Outro assunto").forEach(t => {
+  const o = document.createElement("option"); o.textContent = t; sel.appendChild(o);
+});
+document.getElementById("form").addEventListener("submit", e => {
+  e.preventDefault();
+  const v = id => document.getElementById(id).value.trim();
+  const nome = v("f-nome"), tel = v("f-tel"), msg = v("f-msg"), tipo = v("f-tipo");
+  const err = document.getElementById("f-err");
+  if (!nome) { err.textContent = "Digite seu nome para continuar."; document.getElementById("f-nome").focus(); return; }
+  if (!tel) { err.textContent = "Informe um telefone para o escritório retornar o contato."; document.getElementById("f-tel").focus(); return; }
+  err.textContent = "";
+  const texto = `Olá! Meu nome é ${nome} (${tipo.toLowerCase()}) e gostaria de atendimento sobre ${sel.value}.\nTelefone para retorno: ${tel}` + (msg ? `\n\n${msg}` : "");
+  if (CONFIG.whatsapp) window.open(wa(texto), "_blank", "noopener");
+  else location.href = `mailto:${CONFIG.email}?subject=${encodeURIComponent("Atendimento pelo site: " + sel.value)}&body=${encodeURIComponent(texto)}`;
+});
+</script>
+</body>
+</html>
